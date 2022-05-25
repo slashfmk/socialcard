@@ -1,0 +1,43 @@
+[
+  {
+    "id": 1,
+    "firstname": "Jarvis",
+    "lastname": "Fumukani",
+    "image": "https://images.pexels.com/photos/1183266/pexels-photo-1183266.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    "about": "I am a software developer, but I do web frontend and backend, swift, and mobile apps development",
+    "social": {
+      "youtube": "https://www.youtube.com/yan2",
+      "facebook": "https://facebook.com/yanfmk",
+      "twitter": "https://twitter.com/yanfmk",
+      "instagram": "@yannickfmk"
+    },
+    "Programming_skills": [
+      {"language": "Javascript", "level": 34, "color": "red"},
+      {"language": "C++", "level": 98, "color": "blue"},
+      {"language": "Typescript", "level": 25, "color": "green"},
+      {"language": "Kotlin", "level": 2, "color": "yellow"}
+    ],
+    "phone": "718 290 4589"
+  },
+
+  {
+    "id": 2,
+    "firstname": "Brinette",
+    "lastname": "Lohombo",
+    "image": "https://images.pexels.com/photos/1882309/pexels-photo-1882309.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    "about": "I am a software developer, but I do web frontend and backend, swift, and mobile apps development",
+    "social": {
+      "youtube": "https://www.youtube.com/bn",
+      "facebook": "https://facebook.com/bn",
+      "twitter": "https://twitter.com/bn",
+      "instagram": "@bn"
+    },
+    "Programming_skills": [
+      {"language": "Javascript", "level": 94, "color": "red"},
+      {"language": "C++", "level": 28, "color": "blue"},
+      {"language": "Typescript", "level": 75, "color": "green"},
+      {"language": "Kotlin", "level": 25, "color": "yellow"}
+    ],
+    "phone": "718 207 8602"
+  }
+]
