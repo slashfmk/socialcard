@@ -9,7 +9,7 @@ import Animated, {
     useAnimatedStyle,
     withTiming,
     withSpring,
-    withRepeat, withDelay
+    withRepeat, withDelay, FadeIn, ZoomInEasyDown, ZoomInEasyUp, ZoomIn
 } from "react-native-reanimated";
 
 const Home: React.FC = () => {
@@ -82,8 +82,12 @@ const Home: React.FC = () => {
                     justifyContent: "center"
                 }}>
                     <View style={{marginBottom: 20}}>
-                        <Animated.Image style={[styles.image, stylePhoto]} source={{uri: user.image}} height={300}
-                                        width={300}/>
+                        <Animated.Image
+                            entering={ZoomIn.delay(1000).duration(1000).springify()}
+                            style={[styles.image]}
+                            source={{uri: user.image}}
+                            height={300}
+                            width={300}/>
                     </View>
                     {/*<View style={styles.section}>*/}
                     <Animated.Text
@@ -92,7 +96,6 @@ const Home: React.FC = () => {
                 </View>
 
                 <ScrollView style={styles.container}>
-
 
                     <Animated.View style={[styles.section, leftFadingStyle]}>
                         <Text style={styles.title}>About me</Text>
@@ -104,8 +107,8 @@ const Home: React.FC = () => {
                     {/* programming skills*/}
                     <Animated.View style={[styles.section, rightFadingStyle]}>
                         <Text style={styles.title}>Programming skills</Text>
-                        {user.Programming_skills.map((item, id) =>
-                            <View>
+                        {user.Programming_skills.map((item, index) =>
+                            <Animated.View key={index} entering={FadeIn.delay(1000 * index)}>
                                 <Text style={styles.contentTextSkill}>{item.language}</Text>
                                 {/*<Barometer level={item.level}/>*/}
                                 <Progress.Bar
@@ -114,7 +117,7 @@ const Home: React.FC = () => {
                                     width={Dimensions.get("window").width - 80}
                                     style={{borderWidth: 0, backgroundColor: "#ccc"}}
                                     color={"orange"}/>
-                            </View>
+                            </Animated.View>
                         )}
                     </Animated.View>
                     {/* Social media*/}
@@ -174,7 +177,7 @@ const styles = StyleSheet.create({
     contentText: {
         fontFamily: "Montserrat",
         fontWeight: "bold",
-        fontSize: 17,
+        fontSize: 16,
         color: "#212020"
     },
     contentTextSkill: {
